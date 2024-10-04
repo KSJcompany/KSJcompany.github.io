@@ -1,10 +1,12 @@
 ---
 layout: post
 title: ResNet_Paper_Review
-subtitle: my first academic website
+subtitle: Deep Residual Learning for Image Recognition
 author: Kim Seojin
 content_types: Paper_Review
 research_areas: computer_vision
+sidebar: []
+paper_link: https://arxiv.org/abs/1512.03385
 ---
 
 # ResNet

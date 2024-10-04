@@ -5,10 +5,19 @@
 {%- assign post = item -%}
 
 {% assign date_format = site.yat.date_format | default: "%b %-d, %Y" %}
-<span class="post-meta">{{ post.date | date: date_format }}</span>
-<span>
-  <a class="post-link" href="{{ post.url | relative_url }}">
-    {{ post.title | escape }}
-    {%- include views/post-badges.html -%}
-  </a>
-</span>
+<div class="post-item-container">
+  <div class="post-meta-and-title">
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <div class="post-title-and-link">
+      <h3 class="post-title">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+        {%- include views/post-badges.html -%}
+      </h3>
+      {% if site.paper_link.enabled and post.paper_link %}
+        <a href="{{ post.paper_link }}" target="_blank" rel="noopener noreferrer" class="paper-link">{{ site.paper_link.text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -295,9 +295,25 @@ html {
   }
 
   .post-meta {
+    font-size: 0.8em;
     color: $grey-color;
-    font-size: $base-font-size;
-    margin-bottom: $spacing-unit * 0.5;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 10px;
+
+    > span {
+      margin-right: 15px;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .fa {
+      margin-right: 3px;
+    }
   }
 
   .post-excerpt {
@@ -825,4 +841,84 @@ a:visited .post-badges .post-badge.badge-new {
   display: none;
   color: $background-color;
   background-color: $background-color;
+}
+
+.paper-link {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ff0000 !important; // !important를 추가하여 다른 스타일을 덮어씁니다
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+    color: #cc0000 !important; // 호버 시 색상 변경 (선택사항)
+  }
+}
+
+.post-item-container {
+  margin-bottom: 20px;
+}
+
+.post-meta-and-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.post-meta {
+  font-size: 0.8em;
+  color: $grey-color;
+  width: 90px;
+  margin-right: 5px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.post-title-and-link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.post-link {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.post-author, .post-reading-time {
+  &::before {
+    content: "\2022"; // 불릿 포인트
+    margin: 0 5px;
+    color: $grey-color;
+  }
+}
+
+.post-author, .post-reading-time {
+  &::before {
+    content: "\2022"; // 불릿 포인트
+    margin: 0 5px 0 -10px;
+    color: $grey-color;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .post-meta {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
 }

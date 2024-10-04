@@ -249,3 +249,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+# Paper link settings
+paper_link:
+  enabled: true
+  text: "[Paper]"
