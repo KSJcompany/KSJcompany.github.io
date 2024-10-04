@@ -140,7 +140,7 @@ yat:
 # it will be always kept on every visit (i.e. no matter
 # the browser is closed or not)
 #
-# night_mode: "auto"
+night_mode: "off"
 
 # Code badge setting
 # You can enable or disable the code badge and so on
@@ -159,12 +159,12 @@ header_pages:
   - tags.html
   - about.html
 
-# Page default value
-# defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
-#     banner: "Your image url"
+#Page default value
+defaults:
+  home:
+    heading: "Welcome to Kim Seojin website"
+    subheading: "sharing my record"
+    banner: "/assets/images/banners/home2.jpg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
