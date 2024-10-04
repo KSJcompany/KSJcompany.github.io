@@ -6,15 +6,4 @@
 {% assign keys = content_types %}
 {% assign field = 'content_types' %}
 {% assign url = '/content-types.html' | relative_url %}
-
-<div class="common-list">
-  <ul>
-    {% for key in keys %}
-      <li>
-        <a href="{{ url }}#h-{{ key | slugify }}">
-          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+{% include sidebar/common-list.html %}

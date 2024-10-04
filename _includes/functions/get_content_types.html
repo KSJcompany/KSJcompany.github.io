@@ -1,0 +1,12 @@
+{% assign split_mark = '<|>' %}
+
+{% assign content_types = '' %}
+{% for category in site.content_types %}
+  {% assign name = content_type | first %}
+  {% assign content_types = content_types | append: split_mark  | append: name %}
+{% endfor %}
+
+{% assign return = content_types
+  | remove_first: split_mark
+  | split: split_mark
+  | sort: self %}

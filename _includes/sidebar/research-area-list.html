@@ -1,9 +1,9 @@
-{%- include functions.html func='log' level='debug' msg='Get tags value' -%}
+{%- include functions.html func='log' level='debug' msg='Get research areas value' -%}
 
-{%- include functions.html func='get_tags' -%}
-{% assign tags = return %}
+{%- include functions.html func='get_research_areas' -%}
+{% assign research_areas = return %}
 
-{% assign keys = tags %}
-{% assign field = 'tags' %}
-{% assign url = '/tags.html' | relative_url %}
+{% assign keys = research_areas %}
+{% assign field = 'research_areas' %}
+{% assign url = '/research-areas.html' | relative_url %}
 {%- include sidebar/common-list.html -%}

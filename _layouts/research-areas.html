@@ -1,16 +1,16 @@
 ---
 layout: framework
-sidebar: tag-list
+sidebar: research-area-list
 ---
 
 {%- if site.posts.size > 0 -%}
 
-  {%- include functions.html func='log' level='debug' msg='Get tags value' -%}
-  {%- include functions.html func='get_tags' -%}
-  {% assign tags = return %}
+  {%- include functions.html func='log' level='debug' msg='Get research_areas value' -%}
+  {%- include functions.html func='get_research_areas' -%}
+  {% assign research_areas = return %}
 
-  {% assign keys = tags %}
-  {% assign field = 'tags' %}
+  {% assign keys = research_areas %}
+  {% assign field = 'research_areas' %}
   {%- include views/segments.html -%}
 
 {%- endif -%}
