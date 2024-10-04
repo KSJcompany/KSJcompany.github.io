@@ -3,9 +3,169 @@ layout: about
 title: About
 ---
 
-<h2>About</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Academic Website</title>
+    <style>
+        /* Styling to position the image in the top left corner */
+        .profile-pic {
+            position: absolute;
+            #top: 80px;  /* Keep the image near the top */
+            #left: 20px;
+            width: 150px;  /* Adjust the width of the image */
+            height: auto;  /* Maintain aspect ratio */
+            border-radius: 20%;  /* Make the image round (optional) */
+        }
+
+        /* Add padding to move the text below the image */
+        .content {
+            /* margin-top: 220px;  Adjust this value to control spacing */
+             /*padding-left: 180px; Optional: Adjust left padding to avoid text close to the image */
+        }
+    </style>
+</head> -->
+<body>
+    <div class="profile-container">
+        <!-- Profile image -->
+        <img src="cropped_profile_image.jpg" alt="Kim Seojin's Profile Photo" class="profile-pic">
+
+        <!-- Profile details -->
+        <div class="profile-details" style="margin-left: 20px;">
+            <h1>Kim Seojin</h1>
+            <p style="line-height: 10%;">Undergraduate Student</p>
+            <p style="line-height: 10%;">Department of Artificial Intelligence</p>
+            <p style="line-height: 10%;">Yonsei University</p>
+            <p style="line-height: 10%;">kimseojin@yonsei.ac.kr</p>
+
+            <!-- Optional icons (add links to your profiles if needed) -->
+            <div class="profile-icons">
+                <a href="https://github.com/KSJcompany" target="_blank"><img src="github_icon.png" alt="Github"></a>
+                <a href="2023149006_KIMSEOJIN.pdf"><img src="cv_icon.png" alt="CV"></a>
+                <a href="#"><img src="linkedin_icon.png" alt="Linkedin"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="content">
+        <h2>About</h2>
+        <p>I am an undergraduate student in the Department of Artificial Intelligence at Yonsei University, with a focus on computer vision and medical AI. My research interests lie at the intersection of artificial intelligence and healthcare, particularly in developing predictive models for disease diagnosis using biomedical data.</p>
+
+        <br>
+
+        <p><b>Current Research Activities</b>:</p>
+        <ul>
+            <li>&nbsp;&nbsp;Member of YAI (Yonsei Artificial Intelligence) academic society</li>
+            <li>&nbsp;&nbsp;Analyzing biomedical data for disease prediction</li>
+            <li>&nbsp;&nbsp;Exploring applications of computer vision in medical imaging</li>
+        </ul>
+
+        <br>
+
+        <p><b>Ongoing Projects</b>:</p>
+        <ul>
+            <li>&nbsp;&nbsp;Participation in and exploration of projects related to AI-driven healthcare solutions</li>
+            <li>&nbsp;&nbsp;Participation in competitions related to medical AI</li>
+        </ul>
+
+        <br>
+
+        <p><b>Research Goals</b>:</p>
+        <ul>
+            <li>&nbsp;&nbsp;Advance the integration of AI techniques in healthcare diagnostics</li>
+            <li>&nbsp;&nbsp;Contribute to the development of innovative models for early disease detection</li>
+            <li>&nbsp;&nbsp;Explore the potential of AI in improving patient care and medical outcomes</li>
+        </ul>
+
+        <br>
+
+        <p>I am committed to research that connects AI and medical technologies, aiming to contribute to the advancement of medical technology and the utilization of biomedical data through AI.</p>
+    </div>
+
+    <style>
+        /* Container for profile section */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            margin-top: 50px; /* Adjust this value to lower the whole section */
+        }
+
+        /* Style for the profile image */
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; /* Make the image round */
+            margin-right: 30px;
+            margin-top: -30px; /* Move the image up */
+            /* margin-left: -100px; Move the image to the left */
+        }
+
+        /* Style for the text */
+        .profile-details h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .profile-details p {
+            margin: 2px 0; /* Reduced margin for less spacing */
+            font-size: 1.1em;
+        }
+
+        /* Icons styling */
+        .profile-icons {
+            display: flex;          /* Use flexbox to arrange items in a row */
+            gap: 10px;            /* Space between icons */
+            margin-top: 10px;     /* Optional: space above the icons */
+        }
+
+        /* Icons styling */
+        .profile-icons img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Content styling */
+        .content {
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .content p, .content ul {
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+
+        /* Optional: Adjust layout for mobile screens */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-pic {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</body>
+
+
+
+<!-- <p>
 :art:&nbsp;Yet another theme for elegant writers with modern flat style
 and beautiful night mode.
 </p>
@@ -14,4 +174,4 @@ and beautiful night mode.
 Hey, nice to meet you, you found this Jekyll theme. Here the yet another
 theme is a modern theme, and it's quite clear, clean and neat for writers
 and posts.
-</p>
+</p> -->
