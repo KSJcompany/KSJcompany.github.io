@@ -39,13 +39,13 @@ title: About
             <p style="line-height: 10%;">Undergraduate Student</p>
             <p style="line-height: 10%;">Department of Artificial Intelligence</p>
             <p style="line-height: 10%;">Yonsei University</p>
-            <p style="line-height: 10%;">kimseojin@yonsei.ac.kr</p>
+            <p style="line-height: 10%;">dattol1136@yonsei.ac.kr</p>
 
             <!-- Optional icons (add links to your profiles if needed) -->
             <div class="profile-icons">
-                <a href="https://github.com/KSJcompany" target="_blank"><img src="github_icon.png" alt="Github" style="cursor: pointer;"></a>
-                <a href="2023149006_KIMSEOJIN.pdf"><img src="cv_icon.png" alt="CV"></a>
-                <a href="#"><img src="linkedin_icon.png" alt="Linkedin"></a>
+                <span class="icon-link github-icon" data-href="https://github.com/KSJcompany"></span>
+                <span class="icon-link cv-icon" data-href="2023149006_KIMSEOJIN.pdf"></span>
+                <span class="icon-link linkedin-icon" data-href="#"></span>
             </div>
         </div>
     </div>
@@ -160,6 +160,35 @@ title: About
             }
         }
     </style>
+
+    <style>
+        .icon-link {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+        .github-icon { background-image: url('/assets/images/github_icon.png'); }
+        .cv-icon { background-image: url('/assets/images/cv_icon.png'); }
+        .linkedin-icon { background-image: url('/assets/images/linkedin_icon.png'); }
+    </style>
+
+    <script>
+    document.querySelectorAll('.icon-link').forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('data-href');
+            
+            if (href && href !== '#') {
+                window.open(href, '_blank');
+            }
+        });
+    });
+    </script>
 
 </body>
 
