@@ -1,0 +1,20 @@
+{%- include functions.html func='log' level='debug' msg='Get content types value' -%}
+
+{%- include functions.html func='get_content_types' -%}
+{% assign content_types = return %}
+
+{% assign keys = content_types %}
+{% assign field = 'content_types' %}
+{% assign url = '/content-types.html' | relative_url %}
+
+<div class="common-list">
+  <ul>
+    {% for key in keys %}
+      <li>
+        <a href="{{ url }}#h-{{ key | slugify }}">
+          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

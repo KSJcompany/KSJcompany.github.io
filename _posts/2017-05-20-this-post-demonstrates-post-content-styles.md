@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "This post demonstrates post content styles"
-categories: junk
+content_types: junk
 author: "Bart Simpson"
 meta: "Springfield"
 ---
