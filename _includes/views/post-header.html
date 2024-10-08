@@ -3,20 +3,16 @@
   <h2 class="post-subtitle">{{ subheading | default: page.subtitle | escape }}</h2>
 
   <div class="post-meta">
-    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
-      <i class="fa fa-calendar"></i> {{ page.date | date: date_format }}
-    </time>
-
+    <span class="post-date"><i class="fa fa-calendar"></i> {{ page.date | date: date_format }}</span>
     {%- if page.author -%}
-    <span class="post-author left-vsplit"><i class="fa fa-pencil"></i> {{ page.author | escape }}</span>
+    <span class="post-author"><i class="fa fa-user"></i> {{ page.author | escape }}</span>
     {%- endif -%}
-
-    {% assign article = page.content %}
-    {% assign lang = page.lang %}
-    {%- include functions.html func='get_reading_time' -%}
-    {% assign reading_time = return %}
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+    {%- if page.content_types -%}
+    <span class="post-content-type"><i class="fa fa-folder"></i> {{ page.content_types }}</span>
+    {%- endif -%}
+    {%- if page.research_areas -%}
+    <span class="post-research-area"><i class="fa fa-tag"></i> {{ page.research_areas | join: ", " }}</span>
+    {%- endif -%}
   </div>
 
   {%- if page.tags.size > 0 -%}

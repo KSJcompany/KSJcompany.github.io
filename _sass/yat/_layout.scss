@@ -922,3 +922,49 @@ a:visited .post-badges .post-badge.badge-new {
     white-space: normal;
   }
 }
+
+.post-header {
+  .post-meta {
+    font-size: 0.8em;
+    color: $grey-color;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+
+    > span {
+      margin-right: 15px;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .fa {
+      margin-right: 3px;
+    }
+  }
+
+  .post-author, .post-content-type, .post-research-area {
+    &::before {
+      content: "\2022"; // 불릿 포인트
+      margin: 0 5px 0 -10px;
+      color: $grey-color;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .post-header {
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+
+      > span {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
