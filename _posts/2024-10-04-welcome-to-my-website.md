@@ -2,6 +2,7 @@
 layout: post
 title: Welcome to my website
 subtitle: my first academic website
+excerpt_image: https://wrtn-image-user-output.s3.ap-northeast-2.amazonaws.com/65fe6fffdcfc1caee2e24ae2/c39d0e8a-759c-4b2f-a3be-c915310e3149.png
 author: Kim Seojin
 content_types: blog
 research_areas: html

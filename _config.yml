@@ -255,5 +255,6 @@ paper_link:
   enabled: true
   text: "[Paper]"
 
+
 exclude:
   - _site/KSJcompany.github.io/jekyll/update/2024/10/11/welcome-to-jekyll.html

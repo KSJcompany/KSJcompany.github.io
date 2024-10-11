@@ -7,6 +7,8 @@ content_types: Implementation
 research_areas: computer_vision
 sidebar: []
 paper_link: https://arxiv.org/abs/1505.04597
+ppt_link: https://example.com/presentation.ppt
+video_link: https://youtube.com/watch?v=example
 ---
 
 # UNet Implementation
@@ -472,9 +474,9 @@ The dataset used is from the ISBI 2012 EM Segmentation Challenge
 
 **Prediction results for test image (image #8)**
 
-![8.tif](/assets/images/post_data/UNet_Implementation_image/8.tif)
+![8.png](/assets/images/post_data/UNet_Implementation_image/8.png)
 
-![prediction_8.png](/assets/images/post_data/UNet_Implementation_image/ prediction_8.png)
+![prediction_8.png](/assets/images/post_data/UNet_Implementation_image/prediction_8.png)
 
 When I first ran the model, the dataset was divided into only training and test sets, so I ran it without a validation set.
 
@@ -795,7 +797,7 @@ You can see that the loss is lower, and the IoU is higher compared to the case w
 
 **Prediction results for test image (image #8)**
 
-![8.tif](/assets/images/post_data/UNet_Implementation_image/8.tif)
+![8.png](/assets/images/post_data/UNet_Implementation_image/8.png)
 
 ![prediction_8 (1).png](/assets/images/post_data/UNet_Implementation_image/prediction_8_(1).png)
 
