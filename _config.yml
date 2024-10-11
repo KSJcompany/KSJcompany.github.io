@@ -254,7 +254,12 @@ plugins:
 paper_link:
   enabled: true
   text: "[Paper]"
-
+ppt_link:
+  enabled: true
+  text: "[PPT]"
+video_link:
+  enabled: true
+  text: "[Video]"
 
 exclude:
   - _site/KSJcompany.github.io/jekyll/update/2024/10/11/welcome-to-jekyll.html

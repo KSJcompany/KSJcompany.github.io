@@ -843,10 +843,9 @@ a:visited .post-badges .post-badge.badge-new {
   background-color: $background-color;
 }
 
-.paper-link {
+.paper-link, .ppt-link, .video-link {
   font-size: 0.8em;
   text-decoration: none;
-  color: #ff0000 !important; // !important를 추가하여 다른 스타일을 덮어씁니다
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
@@ -854,9 +853,16 @@ a:visited .post-badges .post-badge.badge-new {
 
   &:hover {
     text-decoration: underline;
-    color: #cc0000 !important; // 호버 시 색상 변경 (선택사항)
   }
 }
+
+.paper-link { color: #ff0000 !important; }
+.ppt-link { color: #ff0000 !important; }
+.video-link { color: #ff0000 !important; }
+
+.paper-link:hover { color: #cc0000 !important; }
+.ppt-link:hover { color: #cc0000 !important; }
+.video-link:hover { color: #cc0000 !important; }
 
 .post-item-container {
   margin-bottom: 20px;

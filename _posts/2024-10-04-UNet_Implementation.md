@@ -7,8 +7,7 @@ content_types: Implementation
 research_areas: computer_vision
 sidebar: []
 paper_link: https://arxiv.org/abs/1505.04597
-ppt_link: https://example.com/presentation.ppt
-video_link: https://youtube.com/watch?v=example
+ppt_link: /assets/U-Net.pdf
 ---
 
 # UNet Implementation

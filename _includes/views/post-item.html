@@ -18,6 +18,12 @@
       {% if site.paper_link.enabled and post.paper_link %}
         <a href="{{ post.paper_link }}" target="_blank" rel="noopener noreferrer" class="paper-link">{{ site.paper_link.text }}</a>
       {% endif %}
+      {% if site.ppt_link.enabled and post.ppt_link %}
+        <a href="{{ site.baseurl }}{{ post.ppt_link }}" target="_blank" rel="noopener noreferrer" class="ppt-link">{{ site.ppt_link.text }}</a>
+      {% endif %}
+      {% if site.video_link.enabled and post.video_link %}
+        <a href="{{ post.video_link }}" target="_blank" rel="noopener noreferrer" class="video-link">{{ site.video_link.text }}</a>
+      {% endif %}
     </div>
   </div>
 </div>
