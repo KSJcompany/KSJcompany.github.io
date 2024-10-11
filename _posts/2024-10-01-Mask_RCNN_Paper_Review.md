@@ -2,6 +2,7 @@
 layout: post
 title: Mask R-CNN_Paper_Review
 subtitle: Mask R-CNN
+excerpt_image: /assets/images/post_data/Mask_RCNN_Paper_Review_banner.jpg
 author: Kim Seojin
 content_types: Paper_Review
 research_areas: computer_vision

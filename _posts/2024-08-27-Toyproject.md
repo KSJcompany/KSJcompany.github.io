@@ -2,6 +2,7 @@
 layout: post
 title: Toy Project
 subtitle: Analyzing Image Classification with CAM using various CNNs
+excerpt_image: /assets/images/post_data/Toyproject_banner.png
 author: Kim Seojin
 content_types: Project
 research_areas: computer_vision

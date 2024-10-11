@@ -2,6 +2,7 @@
 layout: post
 title: R-CNN_Paper_Review
 subtitle: Rich feature hierarchies for accurate object detection and semantic segmentation
+excerpt_image: /assets/images/post_data/RCNN_Paper_Review_banner.png
 author: Kim Seojin
 content_types: Paper_Review
 research_areas: computer_vision

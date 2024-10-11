@@ -2,6 +2,7 @@
 layout: post
 title: DCGAN_Paper_Review
 subtitle: Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks
+excerpt_image: /assets/images/post_data/DCGAN_Paper_Review_banner.png
 author: Kim Seojin
 content_types: Paper_Review
 research_areas: computer_vision

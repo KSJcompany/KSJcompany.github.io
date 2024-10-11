@@ -2,6 +2,7 @@
 layout: post
 title: ResNet_Paper_Review
 subtitle: Deep Residual Learning for Image Recognition
+excerpt_image: /assets/images/post_data/ResNet_Paper_Review_banner.png
 author: Kim Seojin
 content_types: Paper_Review
 research_areas: computer_vision
