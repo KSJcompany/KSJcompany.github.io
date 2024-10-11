@@ -93,7 +93,8 @@ title: About
             align-items: center;
             justify-content: center;
             text-align: left;
-            margin-top: 50px; /* Adjust this value to lower the whole section */
+            margin-top: 50px;
+            padding-left: 10%; /* 이 부분을 추가하여 전체 컨테이너를 오른쪽으로 이동 */
         }
 
         /* Style for the profile image */
@@ -104,6 +105,12 @@ title: About
             margin-right: 30px;
             margin-top: -30px; /* Move the image up */
             /* margin-left: -100px; Move the image to the left */
+        }
+
+        .profile-details {
+        flex: 1;
+        max-width: 60%;
+        margin-top: -10px; /* 이 줄을 추가하여 텍스트를 아래로 내립니다 */
         }
 
         /* Style for the text */

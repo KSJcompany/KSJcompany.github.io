@@ -2,6 +2,7 @@
 layout: post
 title: UNet_Implementation
 subtitle: Convolutional Networks for Biomedical Image Segmentation
+excerpt_image: /assets/images/post_data/UNet_banner.png
 author: Kim Seojin
 content_types: Implementation
 research_areas: computer_vision
