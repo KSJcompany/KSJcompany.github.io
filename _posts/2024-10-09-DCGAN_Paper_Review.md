@@ -7,6 +7,7 @@ content_types: Paper_Review
 research_areas: computer_vision
 sidebar: []
 paper_link: https://arxiv.org/abs/1511.06434
+show_on_home: false
 ---
 
 # DCGAN

@@ -261,3 +261,10 @@ video_link:
 
 exclude:
   - _site/KSJcompany.github.io/jekyll/update/2024/10/11/welcome-to-jekyll.html
+
+show_on_home_posts:
+  - "Welcome to my website"
+  - "2024 Summer Digital Healthcare Bootcamp"
+  - "Toy Project"
+  - "UNet_Implementation"
+  - "Yonsei-Nexon RC Creative Platform"

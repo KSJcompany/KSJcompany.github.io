@@ -7,6 +7,7 @@ content_types: Paper_Review
 research_areas: computer_vision
 sidebar: []
 paper_link: https://arxiv.org/abs/1703.06870
+show_on_home: false
 ---
 
 # Mask R-CNN
