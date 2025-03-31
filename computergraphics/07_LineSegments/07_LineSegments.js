@@ -377,8 +377,8 @@ function render() {
 }
 
 async function initShader() {
-    const vertexShaderSource = await readShaderFile('shVert.glsl');
-    const fragmentShaderSource = await readShaderFile('shFrag.glsl');
+    const vertexShaderSource = await readShaderFile('/computergraphics/07_LineSegments/shVert.glsl');
+    const fragmentShaderSource = await readShaderFile('/computergraphics/07_LineSegments/shFrag.glsl');
     return new Shader(gl, vertexShaderSource, fragmentShaderSource);
 }
 
