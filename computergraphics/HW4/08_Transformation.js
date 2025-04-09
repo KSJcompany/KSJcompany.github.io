@@ -121,21 +121,27 @@ function render() {
     // ── model3 (model2 기준 공전, yellow, edge length 0.05) ──
     // model2의 스케일이 0.1이므로, model3의 부모 기준 offset을 0.2/0.1 = 2.0로 합니다.
     let model3 = mat4.create();
-    // M_orbit: model3의 공전 변환 (모델2를 기준으로 2.0의 거리, 각도 angle3_orbit)
+    
+    // M_orbit: model3의 공전 변환 (모델2 기준으로 2.0의 거리, 각도 angle3_orbit)
+    // 회전 먼저 적용하고 그 후 translation
     let m_orbit = mat4.create();
-    mat4.translate(m_orbit, m_orbit, [2.0, 0, 0]);
     mat4.rotate(m_orbit, m_orbit, angle3_orbit, [0, 0, 1]);
+    mat4.translate(m_orbit, m_orbit, [2.0, 0, 0]);
+    
     // M_self: model3의 자전 및 로컬 스케일 (자전 angle3_self, 스케일 0.5 → 0.1 * 0.5 = 0.05)
     let m_self = mat4.create();
     mat4.rotate(m_self, m_self, angle3_self, [0, 0, 1]);
     mat4.scale(m_self, m_self, [0.5, 0.5, 1]);
+
     // model3 = model2 * M_orbit * M_self
     let m_local = mat4.create();
     mat4.multiply(m_local, m_orbit, m_self);
     mat4.multiply(model3, model2, m_local);
+    
     gl.vertexAttrib4f(1, 1.0, 1.0, 0.0, 1.0); // yellow
     shader.setMat4("u_model", model3);
     gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
+
 
     gl.bindVertexArray(null);
     
