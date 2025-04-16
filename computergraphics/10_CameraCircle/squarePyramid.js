@@ -6,39 +6,34 @@ export class squarePyramid {
         this.vbo = gl.createBuffer();
         this.ebo = gl.createBuffer();
 
-        // 6개의 삼각형 × 3 정점 = 총 18개의 정점 (중복 포함)
         this.vertices = new Float32Array([
-            // 바닥면 2개 삼각형 (민트)
+            
             -0.5, 0.0, -0.5,   0.5, 0.0, -0.5,   0.5, 0.0,  0.5,
             -0.5, 0.0, -0.5,   0.5, 0.0,  0.5,  -0.5, 0.0,  0.5,
 
-            // 옆면 1 (노랑)
             -0.5, 0.0, -0.5,   0.5, 0.0, -0.5,   0.0, 1.0,  0.0,
 
-            // 옆면 2 (핑크)
              0.5, 0.0, -0.5,   0.5, 0.0,  0.5,   0.0, 1.0,  0.0,
 
-            // 옆면 3 (빨강)
              0.5, 0.0,  0.5,  -0.5, 0.0,  0.5,   0.0, 1.0,  0.0,
 
-            // 옆면 4 (민트)
             -0.5, 0.0,  0.5,  -0.5, 0.0, -0.5,   0.0, 1.0,  0.0,
         ]);
 
         this.colors = new Float32Array([
-            ...Array(6).fill([0.0, 1.0, 1.0, 1.0]).flat(), // cyan (바닥면)
+            ...Array(6).fill([0.0, 1.0, 1.0, 1.0]).flat(), // cyan
             ...Array(3).fill([1.0, 1.0, 0.0, 1.0]).flat(), // yellow
             ...Array(3).fill([1.0, 0.0, 1.0, 1.0]).flat(), // magenta
             ...Array(3).fill([1.0, 0.0, 0.0, 1.0]).flat(), // red
-            ...Array(3).fill([0.0, 1.0, 1.0, 1.0]).flat(), // cyan again
+            ...Array(3).fill([0.0, 1.0, 1.0, 1.0]).flat(), // cyan
         ]);
         
 
-        this.normals = new Float32Array(this.vertices.length).fill(0);  // 조명 미사용 시 기본값
+        this.normals = new Float32Array(this.vertices.length).fill(0);
 
-        this.texCoords = new Float32Array(this.vertices.length / 3 * 2).fill(0); // 단순 초기화
+        this.texCoords = new Float32Array(this.vertices.length / 3 * 2).fill(0);
 
-        // 정점 순서대로 그리므로 0~17까지 인덱스 순서
+        
         this.indices = new Uint16Array([
             0, 1, 2,
             3, 4, 5,
