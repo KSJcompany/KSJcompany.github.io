@@ -12,10 +12,10 @@
     - 'p' to switch to Phong shading
 - Applying Diffuse & Specular reflection using Flat/Smooth shading to the cone
 ----------------------------------------------------------------------------------*/
-import { resizeAspectRatio, setupText, updateText, Axes } from '../../util/util.js';
-import { Shader, readShaderFile } from '../../util/shader.js';
-import { Cube } from '../../util/cube.js';
-import { Arcball } from '../../util/arcball.js';
+import { resizeAspectRatio, setupText, updateText, Axes } from '../util/util.js';
+import { Shader, readShaderFile } from '../util/shader.js';
+import { Cube } from '../util/cube.js';
+import { Arcball } from '../util/arcball.js';
 import { Cone } from './cone.js';
 
 // gl-matrix-min.js는 전역 객체로 로드되므로 window 객체에서 직접 접근
