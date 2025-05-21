@@ -79,24 +79,36 @@ orbitControls.dampingFactor = 0.05;
 
 const planets = [];
 
-const gui = new GUI();
-const cameraFolder = gui.addFolder('Camera');
-const cameraProps = {
-    cameraType: 'Perspective'
+const cameraControl = {
+    dir: null,
+    fov: 75,
+    'Current Camera': 'Perspective',
+    'Switch Camera Type': function() {
+        if(this['Current Camera'] == 'Perspective') {
+            // 퍼스펙티브에서 직교 카메라로 전환
+            this['Current Camera'] = 'Orthographic';
+            activeCamera = orthographicCamera;
+            // 카메라 위치와 방향 동기화
+            orthographicCamera.position.copy(camera.position);
+            orthographicCamera.rotation.copy(camera.rotation);
+            orbitControls.object = orthographicCamera;
+        } else {
+            // 직교에서 퍼스펙티브 카메라로 전환
+            this['Current Camera'] = 'Perspective';
+            activeCamera = camera;
+            orbitControls.object = camera;
+        }
+        orbitControls.update();
+    }
 };
 
-cameraFolder.add(cameraProps, 'cameraType', ['Perspective', 'Orthographic']).onChange((value) => {
-    if (value === 'Perspective') {
-        activeCamera = camera;
-        orbitControls.object = camera;
-    } else {
-        activeCamera = orthographicCamera;
-        orthographicCamera.position.copy(camera.position);
-        orthographicCamera.rotation.copy(camera.rotation);
-        orbitControls.object = orthographicCamera;
-    }
-    orbitControls.update();
-});
+const gui = new GUI();
+
+const cameraFolder = gui.addFolder('Camera');
+cameraFolder.open();
+
+cameraFolder.add(cameraControl, 'Switch Camera Type');
+cameraFolder.add(cameraControl, 'Current Camera').listen().disable();
 
 // listen to the resize events
 window.addEventListener('resize', onResize, false);
@@ -135,7 +147,7 @@ const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
 function createPlanet(name, radius, distance, color, rotationSpeed, orbitSpeed, texturePath) {
-    const planetGroup = new THREE.Group();
+    const planetGroup = new THREE.Object3D();
     scene.add(planetGroup);
     
     // Planet orbit line
@@ -182,10 +194,6 @@ function createPlanet(name, radius, distance, color, rotationSpeed, orbitSpeed, 
     
     planetFolder.add(planetProps, 'rotationSpeed', 0, 0.05, 0.001).name('Rotation Speed');
     planetFolder.add(planetProps, 'orbitSpeed', 0, 0.05, 0.001).name('Orbit Speed');
-    planetFolder.add(planetProps, 'distance', distance * 0.5, distance * 1.5, 1).onChange((value) => {
-        orbit.geometry.dispose();
-        orbit.geometry = new THREE.RingGeometry(value - 0.1, value + 0.1, 64);
-    }).name('Distance');
     
     // Add to planets array
     planets.push({
@@ -217,9 +225,6 @@ function animate() {
         
         // Orbit around sun
         planet.group.rotation.y += planet.props.orbitSpeed;
-        
-        // Update planet distance from sun
-        planet.mesh.position.x = planet.props.distance;
     });
     
     // Render the scene with active camera
